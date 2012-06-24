@@ -1,0 +1,14 @@
+#!/bin/sh
+
+for listname in \
+    movies \
+    taglines \
+    production-companies \
+    genres \
+    language \
+    countries \
+    aka-titles \
+; do
+    curl --create-dirs -o ${buildout:directory}/var/plaintext/$listname.list.gz ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/$listname.list.gz
+done
+

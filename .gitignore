@@ -6,4 +6,5 @@ etc
 include
 lib
 parts
+src
 var
