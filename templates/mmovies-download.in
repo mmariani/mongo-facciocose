@@ -1,5 +1,8 @@
 #!/bin/sh
 
+mkdir -p ${buildout:directory}/var/plaintext/
+cd ${buildout:directory}/var/plaintext/
+
 for listname in \
     movies \
     taglines \
@@ -8,7 +11,14 @@ for listname in \
     language \
     countries \
     aka-titles \
+    plot \
 ; do
-    curl --create-dirs -o ${buildout:directory}/var/plaintext/$listname.list.gz ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/$listname.list.gz
+    echo $listname...
+    curl -# -O ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/$listname.list.gz
+    echo
 done
+
+echo additions guide...
+curl -# -O ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/tools/additions-guide.gz
+echo
 
