@@ -1,0 +1,16 @@
+
+dbpath = ${buildout:directory}/var/lib/mongodb
+
+# logpath = ${buildout:directory}/var/log/mongodb.log
+# logappend = true
+
+port = 27017
+bind_ip = 127.0.0.1
+
+# if you trust your firewall
+noauth = true
+rest = false
+
+verbose = true
+
+

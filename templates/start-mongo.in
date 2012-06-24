@@ -1,0 +1,4 @@
+#!/bin/sh
+
+${buildout:directory}/bin/mongod --config ${buildout:directory}/etc/mongodb.conf
+
