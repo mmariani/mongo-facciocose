@@ -12,6 +12,8 @@ for listname in \
     countries \
     aka-titles \
     plot \
+    trivia \
+    color-info \
 ; do
     echo $listname...
     curl -# -O ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/$listname.list.gz
@@ -21,4 +23,7 @@ done
 echo additions guide...
 curl -# -O ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/tools/additions-guide.gz
 echo
+
+
+
 
