@@ -1,0 +1,8 @@
+#!/bin/sh
+
+mkdir -p ${buildout:directory}/var/millionsongs/
+cd ${buildout:directory}/var/millionsongs/
+
+curl -# -O http://static.echonest.com/millionsongsubset_full.tar.gz
+tar xfz millionsongsubset_full.tar.gz
+
