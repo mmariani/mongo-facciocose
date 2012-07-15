@@ -14,6 +14,13 @@ for listname in \
     plot \
     trivia \
     color-info \
+    goofs \
+    miscellaneous-companies \
+    certificates \
+    movies \
+    distributors \
+    alternate-versions \
+    locations \
 ; do
     echo $listname...
     curl -# -O ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/$listname.list.gz
@@ -23,7 +30,4 @@ done
 echo additions guide...
 curl -# -O ftp://ftp.funet.fi/pub/mirrors/ftp.imdb.com/pub/tools/additions-guide.gz
 echo
-
-
-
 
